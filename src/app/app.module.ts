@@ -42,7 +42,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatDialogModule,ReactiveFormsModule
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
