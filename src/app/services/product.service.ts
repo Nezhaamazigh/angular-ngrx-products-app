@@ -39,6 +39,7 @@ export class ProductService {
   }
   public save(product:Product):Observable<Product>{
     return this.http.post<Product>(environment.host+"/products/",product);
+
   }
   public update(product:Product):Observable<Product>{
     return this.http.put<Product>(environment.host+"/products/"+product.id,product);

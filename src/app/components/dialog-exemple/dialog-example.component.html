@@ -1,0 +1,22 @@
+<!--<div class="container" id="content">-->
+    <h1 mat-dialog-title>{{data.operationType}} Product</h1>
+    <div class="container" *ngIf="!data.yesOrNoConfirm">
+        <div mat-dialog-content>
+            <p>Operation well done</p>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-raised-button mat-dialog-close (click)="onNoClose()" color="primary" >OK</button>
+        </div>
+    </div>
+
+    <div class="container" *ngIf="data.yesOrNoConfirm">
+        <div mat-dialog-content>
+            <p>Are you to continue {{data.operationType}} ?</p>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close (click)="onNoClick()" color="primary">Yes</button>
+            <button mat-button (click)="onNoClose()" color="warn">No</button>
+        </div>
+    </div>
+
+<!--</div>-->

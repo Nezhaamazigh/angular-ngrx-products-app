@@ -7,3 +7,7 @@ export interface Product {
   selected:boolean;
   available:boolean;
 }
+export interface DialogData {
+  operationType: 'Add' | 'Editing' | 'Deleting'|'Save';
+  yesOrNoConfirm:boolean;
+}
