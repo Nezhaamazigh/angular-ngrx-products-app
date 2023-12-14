@@ -1,0 +1,21 @@
+<tr *ngIf="product" >
+  <td>{{product.id}}</td>
+  <td>{{product.name}}</td>
+  <td>{{product.price}}</td>
+  <td>{{product.quantity}}</td>
+  <td><span [ngClass]="product.selected?'fa fa-check-circle text-success':''"></span></td>
+  <td>{{product.available}}</td>
+  <td style="display: inline-block">
+
+      <button (click)="onSelect(product)" [ngClass]="product.selected?'btn-primary':'btn-danger'" mat-raised-button class="btn mr-1" >
+        <span *ngIf="product.selected" style="display: inline-block; width: 80px;">Unselect</span>
+        <span *ngIf="!product.selected" style="display: inline-block; width: 80px;" >Select</span>
+      </button>
+    <button class="btn mr-1" (click)="onEdit(product)" mat-raised-button color="primary" >
+    <mat-icon>edit</mat-icon>
+  </button>
+      <button class="btn mr-1" (click)="onDelete(product)" mat-raised-button color="warn">
+          <mat-icon>delete</mat-icon>
+      </button>
+  </td>
+</tr>
